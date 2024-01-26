@@ -1,0 +1,23 @@
+{% include 'app1/base.html' %}
+{% block content%}
+<br>
+<br>
+<br>
+<br>
+<div class="container" style="margin-left: 480px;">
+    <div class="row-justify-content-center">
+        <form style="width:350px;" method="post">
+          {% csrf_token %}
+    <div class="mb-3">
+        <label class="form-label">Plan</label>
+        <input type="text" class="form-control" id="exampleInputPassword1" name="plan" placeholder="Enter your plan">
+        </div>
+    <div class="mb-3">
+        <label class="form-label">fees</label>
+        <input type="number" class="form-control" id="exampleInputPassword1" name="fee" placeholder="enter the fees">
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>
+</div>
+{% endblock %}

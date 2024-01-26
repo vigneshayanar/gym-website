@@ -1,0 +1,27 @@
+{% include 'app1/base.html' %}
+{% block content%}
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">id</th>
+        <th scope="col">Name</th>
+        <th scope="col">conatct</th>
+        <th scope="col">email</th>
+        <th scope="col">Age</th>
+        <th scope="col">gender</th>
+      </tr>
+    </thead>
+    <tbody>
+       {% for entry in enquiries_list %}
+        <tr>
+            <th scope="row">{{ entry.id }}</th>
+            <td>{{ entry.name }}</td>
+            <td>{{ entry.conatct }}</td>
+            <td>{{ entry.email }}</td>
+            <td>{{ entry.age }}</td>
+            <td>{{ entry.gender }}</td>
+        </tr>
+    {% endfor %}
+    </tbody>
+  </table>
+{% endblock %}

@@ -1,0 +1,49 @@
+{% include 'app1/base.html' %}
+{% load static %}
+{% block content %}
+<style>
+  .carosel-item img{
+    object-fit: cover;
+    object-position: top;
+    height:40vh;
+    overflow:hidden;
+}
+</style>
+<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="{% static 'images/fitness1.jpeg' %}"class="d-block w-100" alt="slinder1">
+      <div class="carousel-caption d-none d-md-block">
+    </div>
+    </div>
+    <div class="carousel-item">
+      <img src="{% static 'images/fitness2.jpeg' %}" class="d-block w-100" alt="slinder2">
+    </div>
+    <div class="carousel-item">
+      <img src="{% static 'images/fitness3.jpg' %}" class="d-block w-100" alt="slinder3">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+<div class="container">
+  <div class="justify-content-center">
+    <center><h1>ABOUT OUR GYM</h1></center>
+    <p>Gold's Gym is a globally renowned fitness brand that has made its mark in India. With a strong legacy dating back to 1965 in Venice Beach, California, Gold's Gym has become synonymous with fitness excellence and innovation. Gold’s Gym India carries the legacy ahead in the home country since its inception in 2002. World-class fitness facilities and a comprehensive range of workout programs tailored to meet the needs of diverse fitness enthusiasts is what sets us apart from others.
+      Gold's Gym India, a part of this esteemed legacy, has expanded its presence across various cities, aiming to empower individuals to achieve their fitness goals, regardless of their fitness levels or aspirations. It's a fitness haven that combines state-of-the-art equipment, expert trainers, and a supportive community to foster a holistic approach to wellness.</p>
+  </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,35 @@
+{% include 'app1/base.html' %}
+{% block content%}
+<br>
+<br>
+<br>
+<br>
+<div class="container" style="margin-left: 480px;">
+    <div class="row-justify-content-center">
+        <form style="width:350px;" method="post">
+          {% csrf_token %}
+    <div class="mb-3">
+        <label class="form-label">Name</label>
+        <input type="text" class="form-control" id="exampleInputPassword1" name="name" placeholder="Enter your name">
+        </div>
+    <div class="mb-3">
+        <label class="form-label">Contact</label>
+        <input type="text" class="form-control" id="exampleInputPassword1" name="contact" placeholder="">
+        </div>
+    <div class="mb-3">
+        <label class="form-label">email</label>
+        <input type="text" class="form-control" id="exampleInputPassword1" name="email" placeholder="Enter your email">
+        </div>
+    <div class="mb-3">
+        <label class="form-label">Age</label>
+        <input type="number" class="form-control" id="exampleInputPassword1" name="age" placeholder="Enter your age">
+        </div>
+    <div class="mb-3">
+        <label class="form-label">gender</label>
+        <input type="text" class="form-control" id="exampleInputPassword1" name="gender" placeholder="">
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>
+</div>
+{% endblock %}
