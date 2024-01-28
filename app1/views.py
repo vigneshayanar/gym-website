@@ -3,6 +3,8 @@ from django.contrib.auth.models import User
 from django.contrib.auth import authenticate,login,logout
 from django.contrib import messages
 from .models import memeber,gympaln,enquries,equipments
+from googlesearch import search
+import wikipediaapi
 # Create your views here.
 def home(request):
     return render(request,'app1/home.html')
@@ -91,3 +93,15 @@ def view_planadd(request):
         return redirect('plan')
     else:
         return render(request,'app1/add_plan.html')
+    
+def nutrition(request):
+    return render(request,'app1/nutrition.html')
+
+def query(request):
+    if request.method=='POST':
+        customer="vignesh A/1.0(vigneshaynar@gmail.com)"
+        query = request.POST.get('query', '')        
+        Search=list(search(query,num=5,stop=5,pause=2))  
+        return render(request,'app1/search.html',{'query':query,'results':Search})
+    
+    return render(request, 'app1/gg.html')

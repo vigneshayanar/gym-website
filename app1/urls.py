@@ -11,7 +11,8 @@ urlpatterns = [
     path('addenquries/',views.view_enq,name='add_enq'),
     path('plan/',views.view_plan,name='plan'),\
     path('addplan/',views.view_planadd,name='planadd'),
-
+    path('nutri/',views.nutrition,name='nutrition'),
+    path('query/',views.query,name='query'),
 
 
 ]
