@@ -1,0 +1,76 @@
+{% include 'app1/base.html' %}
+{% block content%}
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<div class="container">
+    <div class="row-justify-content-center">
+        <div class="col-sm-6 col-md-12">
+       <!-- search_results.html -->
+    <center>
+<h2>Results for "{{ query }}"</h2>
+<ul>
+  {% for result in results %} 
+      <strong>*</strong>h={{ result }}
+        <a href={{result}}>link</a>
+    {% endfor %}
+</ul>
+<h2>information for"{{query}}"</h2>
+<p>{{summary}}</p>
+</center>
+</div>
+</div>
+</div>
+<div class="footer">
+    <br>
+    <br>
+    <br>
+    <div class="footer">
+      <footer>
+        <div class="container-fluid bg-dark text-white">
+          <div class="row">
+            <div class="col-12" >
+              <br>
+              <hr>
+              <section class="">
+                <div class="container text-center text-md-start mt-5">
+                  <!-- Grid row -->
+                  <div class="row mt-3">
+                    <!-- Grid column -->
+                    <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                      <!-- Content -->
+                      <h6 class="text-uppercase fw-bold mb-4">
+                        <i class="fas fa-gem me-3"></i>Jhon cena GYmm
+                      </h6>
+                      <p>
+                       Here we can make you better!!
+                      </p>
+                    </div>
+                    
+                    <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                      <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
+                      <p><i class="fas fa-home me-3"></i> New York, NY 10012, US</p>
+                      <p>
+                        <i class="fas fa-envelope me-3"></i>
+                       vigneshaynar@gmail.com
+                      </p>
+                      <p><i class="fas fa-phone me-3"></i>8056268154</p>
+                    </div>
+                  </div>
+                </div>
+              </section>
+      
+              <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+                © 2024 Copyright:
+                <a class="text-reset fw-bold" href="#">Be healthy</a>
+              </div>
+              
+          </div>
+          </div>
+        </div>
+      </footer>
+{% endblock %}
