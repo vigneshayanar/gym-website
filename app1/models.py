@@ -24,9 +24,15 @@ class enquries(models.Model):
     email=models.EmailField()
     age=models.IntegerField()
     gender=models.CharField(max_length=200)
+    description=models.CharField(max_length=500,default='Not solve')
 
 class equipments(models.Model):
     name=models.CharField(max_length=200)
     price=models.IntegerField()
     weight=models.CharField(max_length=10)
     description=models.TextField(max_length=300)
+    image = models.ImageField(upload_to='static/images/', null=False, blank=False,default='equipments2')
+
+    def __str__(self):
+        return(self.name)
+    
