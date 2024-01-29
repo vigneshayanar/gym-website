@@ -75,7 +75,8 @@ def view_enq(request):
         email=request.POST.get('email')
         age=request.POST.get('age')
         gender=request.POST.get('gender')
-        enqurie=enquries.objects.create(name=name,conatct=contact,email=email,age=age,gender=gender)
+        enq=request.POST.get('enqiure')
+        enqurie=enquries.objects.create(name=name,conatct=contact,email=email,age=age,gender=gender,description=enqurie)
         return redirect('enquries')
     else:
         return render(request,'app1/add_enq.html')
@@ -84,6 +85,10 @@ def view_plan(request):
     plan = gympaln.objects.all()
     return render(request, 'app1/gymplan.html', {'plan':plan})
 
+
+def view_equipment(request):
+    enq=equipments.objects.all()
+    return render(request,'app1/equipment.html',{"enq":enq})
 
 def view_planadd(request):
     if request.method=="POST":

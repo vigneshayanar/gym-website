@@ -1,0 +1,29 @@
+{% include 'app1/base.html' %}
+{% block content%}
+<div class="conatiner">
+<div class="row">
+{% for i in enq %}
+<div class="col-sm-3 col-md-3 col-lg-4 ">
+    <hr>
+<div class="card" style="width: 18rem;">
+    <img src="{{i.image}}" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">{{i.name}}</h5>
+      <p class="card-text">{{i.Description}}</p>
+      <p>{{i.price}}</p>
+      <p>{{i.description}}</p>
+    </div>
+  </div>
+</div>
+{% endfor %}
+</div>
+</div> 
+{% endblock %}
+
+
+
+
+
+
+
+
